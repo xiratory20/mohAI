@@ -1,0 +1,20 @@
+# netlify.toml
+
+# Base settings for all contexts
+[build]
+  command = "npm run build"  # Command to build your Vite frontend
+  publish = "dist"         # Directory containing the built frontend assets
+  functions = "netlify/functions" # Directory containing your Netlify functions
+
+# Optional: Redirects/Rewrites (can be useful, but not strictly needed now)
+# [[redirects]]
+#  from = "/*"
+#  to = "/index.html"
+#  status = 200
+
+# Optional: Environment variables for local dev using 'netlify dev'
+# [dev]
+#  command = "npm run dev" # Command to start your dev server
+#  port = 8888           # Port for Netlify Dev server
+#  publish = "dist"      # Needs to be same as build.publish
+#  targetPort = 5173     # Port your Vite server runs on (adjust if needed) 
